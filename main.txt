@@ -1,0 +1,36 @@
+package main
+
+import (
+	"fmt"
+	"go/ast"
+	"go/parser"
+	"go/token"
+	"os"
+)
+
+func main() {
+	fmt.Println(os.Args)
+	// if len(os.Args) < 2 {
+	// 	println("Usage: go run main.go <filename.go>")
+	// 	return
+	// }
+
+	fset := token.NewFileSet()
+	node, err := parser.ParseFile(fset, "test.go", nil, parser.AllErrors)
+	if err != nil {
+		panic(err)
+	}
+
+	ast.Print(fset, node)
+
+	// ast.Inspect(node, func(n ast.Node) bool {
+
+	// 	switch nodeType := n.(type) {
+	// 	case *ast.GenDecl:
+	// 		fmt.Printf("node--1 : %+v\n", nodeType)
+	// 	}
+
+	// 	return true
+	// })
+
+}
