@@ -1,6 +1,6 @@
 {
-  "name": "go-checker-2",
-  "displayName": "go-checker-2",
+  "name": "go-checker-3",
+  "displayName": "go-checker-3",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -17,8 +17,15 @@
   "contributes": {
     "commands": [
       {
-        "command": "go-checker-2.helloWorld",
+        "command": "go-checker-3.helloWorld",
         "title": "Hello World"
+      }
+    ],
+    "languages": [
+      {
+        "id": "go",
+        "extensions": [".go"],
+        "aliases": ["Go"]
       }
     ]
   },
